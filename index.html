@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Is It Brunch?</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+    <div class="min-h-screen flex flex-col items-center justify-center p-4">
+        <div class="w-full max-w-lg bg-white rounded-lg shadow-lg p-6">
+            <h1 class="text-3xl font-bold text-center mb-8">Is It Brunch? 🍳</h1>
+            
+            <div id="quiz-container">
+                <!-- Questions will be dynamically inserted here -->
+            </div>
+
+            <div id="results-container" class="hidden">
+                <!-- Results will be dynamically inserted here -->
+            </div>
+
+            <div class="flex justify-between mt-6">
+                <button id="prev-btn" class="px-4 py-2 bg-gray-200 rounded hidden">Previous</button>
+                <button id="next-btn" class="px-4 py-2 bg-blue-500 text-white rounded">Next</button>
+            </div>
+
+            <div class="mt-4">
+                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                    <div id="progress-bar" class="bg-blue-500 h-2.5 rounded-full" style="width: 0%"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="quiz-data.js"></script>
+    <script src="quiz-logic.js"></script>
+</body>
+</html>
