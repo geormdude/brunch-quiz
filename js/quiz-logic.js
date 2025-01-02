@@ -179,13 +179,18 @@ function showResults() {
     html += `
                 </div>
             </div>
-            <button onclick="location.reload()" class="mt-6 px-6 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors">
+            <button id="try-again-btn" class="mt-6 px-6 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors">
                 Try Again
             </button>
         </div>
     `;
 
     resultsContainer.innerHTML = html;
+    
+    // Add event listener after inserting the HTML
+    document.getElementById('try-again-btn').addEventListener('click', () => {
+        location.reload();
+    });
 }
 
 // Event Listeners
